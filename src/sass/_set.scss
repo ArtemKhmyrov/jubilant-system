@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+html {
+    font-family: 'Inter'; // шрифт по умолчанию по сайту
+    font-size: 0.7144vw; // 10 / (1400 / 100)  === 0,7142857142857143 | 0.7143vw == 10px
+    font-style: normal;
+    font-weight: normal;
+    -webkit-animation: bugfix infinite 1s;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    user-select: none;
+}
+
+body {
+    font-style: normal;
+    font-weight: normal;
+    -webkit-animation: bugfix infinite 1s;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: #282828; // цвет по умолчанию текста по сайту
+    background-color: #F5F5F5;
+
+    &._lock{
+        overflow: hidden;
+        &:before {
+            content: "";
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+    }
+}
+
+
+input,
+textarea {
+    -webkit-animation: bugfix infinite 1s;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    transition: color 0.5s;
+    color: unset;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #D2D2D2;
+}
+
+button,
+input,
+a,
+textarea {
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        outline: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+button {
+    border: none;
+    color: inherit;
+    font: inherit;
+    text-align: inherit;
+    padding: 0;
+    background-color: inherit;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    width: 124.1rem;
+    height: 100%;
+    margin: 0 auto;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="date"] {
+    width: 100%;
+    height: 3rem;
+    border: 0.2rem solid #6CAFC9;
+    border-radius: 1rem;
+    padding: 0 1rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    //opacity:0;//скрыть иконку
+}
+
+@media (max-width: 48em) {
+    html {
+        font-size: 1.1042vw;
+        // font-size: 5/(320/100); // где 320 это ширина моб версии макета
+        // font-size: 5/(480/100); // где 480 это ширина моб версии макета
+        -webkit-text-size-adjust: none;
+    }
+
+    body {
+        -webkit-text-size-adjust: none;
+    }
+
+    .container {
+        padding: 0 3.2rem;
+        width: 100%;
+    }
+}

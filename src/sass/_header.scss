@@ -1,0 +1,41 @@
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    nav{
+        height: 100%;
+    }
+    &__background{
+        height: 6.2rem;
+        background-color: #272727;
+    }
+    &__list{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        &_link{
+            color: #D1B476;
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 2.5rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &_wrap{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        span{
+            display: block;
+            background-color: #D1B476;
+            width: .2rem;
+            height: 3rem;
+            margin: 0rem .9rem;
+        }
+    }
+}

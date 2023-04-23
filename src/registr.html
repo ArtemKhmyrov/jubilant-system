@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="favicons.ico"> <!-- Поменять на нормально название -->
+        <title>bitmaker course - registr</title>
+
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/fonts.css" rel="stylesheet">
+   
+        <script src="js/script.js" defer></script>
+    
+    </head>
+    
+<body>
+    <header class="header">
+        <div class="header__background">
+            <div class="container">
+                <nav>
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="/" class="header__item_link">Название проекта</a>
+                        </li>
+                        <li class="header__item">
+                            <ul class="header__item_wrap">
+                                <li class="header__item">
+                                    <a href="./login.html" class="header__item_link">Вход</a>
+                                </li>
+                                <li class="header__item">
+                                    <span></span>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./registr.html" class="header__item_link">Регистрация</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="page-content">
+            <div class="page-content__image">
+                <picture>
+                    <img src="./img/login.png" alt="photo">
+                </picture>
+            </div>
+            <div class="page-content__wrap">
+                <h2 class="page-content__title">Регистрация</h2>
+                <div class="registration-form__wrap">
+                    <form action="./vendor/signup.php" method="POST" class="registration-form">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="email" name="email" placeholder="Почта" required>
+                        <input type="text" name="login" placeholder="Логин" required>
+                        <input type="password" name="password" placeholder="Пароль" required>
+                        <input type="password" name="password_confirm" placeholder="Повторите пароль" required>
+                        <input type="submit" value="Зарегистрироваться">
+                    </form>
+                    <div class="registration-form__wrap_title">
+                        <span class="registration-form__description">Уже есть аккаунт?</span>
+                        <a href="./login.html" class="registration-form__link">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__background">
+            <div class="container">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="/" class="footer__item_link">Цель проекта</a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#" class="footer__item_link">Войти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
