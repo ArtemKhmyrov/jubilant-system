@@ -10,9 +10,11 @@
     
     if(mysqli_num_rows($check_user) > 0){
          $user = mysqli_fetch_assoc($check_user);
+         
     }
     else{
-        header('Location: index.php');
+        print_r('Вы не авторизовались');
+        header('Location: ../index.php');
     }
 ?>
 <pre>

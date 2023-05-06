@@ -11,14 +11,20 @@
     }
     &__title{
         font-weight: 400;
-        font-size: 4.8rem;
+        font-size: 3.8rem;
         line-height: 5.8rem;
         display: flex;
         text-align: center;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.1em;
+        color: #D1B476;
+        text-transform: uppercase;
+        align-items: flex-end;
+    }
+    &_description{
+        position: relative;
+        line-height: 2.8rem !important;
+        letter-spacing: 0.1em;
         color: #C2C2C2;
         text-transform: uppercase;
-        height: 100%;
-        align-items: flex-end;
     }
 }

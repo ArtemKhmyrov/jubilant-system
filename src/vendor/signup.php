@@ -10,7 +10,7 @@
 
 
     if($password === $password_confirm){
-        $password = md5($password);
+       // $password = md5($password);
         mysqli_query($conn, "INSERT INTO `users` (`id`, `name`, `email`, `login`, `password`) VALUES ('', '$name', '$email', '$login', '$password')");
         
         header('Location: ../index.html');

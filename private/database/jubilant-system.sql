@@ -41,8 +41,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `login`, `password`) VALUES
 (0, 'Артем', 'a.edj@mail.ru', 'Keklol', '123'),
-(0, 'test', 'test@mail.ru', 'test', '4edefd1254ebf8bdb04bf7c208a1f347'),
-(0, 'Артем', 'a.edj@mail.ru', 'KeklolLolkek', '9b1bac5b2a5163f38c02f6b8bbc88ee0');
+(1, 'test', 'test@mail.ru', 'test', '4edefd1254ebf8bdb04bf7c208a1f347'),
+(2, 'Артем', 'a.edj@mail.ru', 'KeklolLolkek', '9b1bac5b2a5163f38c02f6b8bbc88ee0');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

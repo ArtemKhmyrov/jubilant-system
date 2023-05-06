@@ -1,0 +1,72 @@
+.course{
+    &__wrap{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 99vh;
+        width: 100%;
+        &_hover{
+            display: none;
+        }
+        &-bg{
+            display: flex;
+            flex-direction: row;
+            
+        }
+    }
+    &__bg{
+        width: 100%;
+        height: 99vh;
+        img{
+            &:hover{
+                cursor: pointer;
+
+                .course__bg{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__content{
+        position: absolute;
+        top: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+/* Сразу скрываем вторую картинку */
+.change-photos{
+    width: 50%;
+    height: 99vh;
+}
+.change-photos .change-photo:nth-of-type(2) {
+    display: none;
+    width: 100%;
+    height: 99vh;
+  }
+  
+  /* При наведении курсора на родительский класс change-photos первую картинку скрываем, а вторую показываем */
+  
+  .change-photos:hover .change-photo:nth-of-type(1) {
+    display: none;
+    width: 100%;
+  }
+  
+  .change-photos:hover .change-photo:nth-of-type(2) {
+    width: 100%;
+    display: block;
+  }
+  
+  .change-photos:hover {
+    cursor: pointer;
+  }
+  .change{
+    display: flex;
+  }

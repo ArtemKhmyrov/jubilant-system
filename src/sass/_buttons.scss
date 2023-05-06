@@ -1,0 +1,52 @@
+
+.button{
+    &-link{
+        font-size: 1.4rem;
+        font-family: "Inter";
+        font-weight: 700;
+    }
+    &-gold{ 
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "montserrat";
+        text-decoration: none;
+        margin: 3rem 0;
+        border: .2rem solid #D1B476;
+        padding: 1.4rem;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: 1s all ease;
+        width: 100%;
+        margin: 2rem  auto 0rem;
+        width: 50%;
+        transform: translate(0,0);
+        &::before{
+            background: #D1B476;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            transition: all 0.6s ease;
+        }
+    
+        &::before{
+            width: 100%;
+            height: 0%;
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+        &:hover{
+            border-radius: 0rem 2rem;
+            &::before{
+                height: 380%;
+            }
+            .button-link{
+                color: black;
+            }
+        }
+    }
+    
+}
