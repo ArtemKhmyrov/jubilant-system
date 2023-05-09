@@ -1,72 +1,136 @@
-.course{
-    &__wrap{
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        height: 99vh;
-        width: 100%;
-        &_hover{
-            display: none;
-        }
-        &-bg{
-            display: flex;
-            flex-direction: row;
-            
-        }
-    }
-    &__bg{
-        width: 100%;
-        height: 99vh;
-        img{
-            &:hover{
-                cursor: pointer;
+.courses{
+    width: 100%;
+    height: 99vh;
+    display: flex;
+    flex-direction: row;
 
-                .course__bg{
-                    display: none;
+    &-photos{
+        width: 50%;
+        .courses-photo{
+            img{
+                width: 100%;
+                height: 99vh;
+                background-position: center left;
+                object-fit: cover;
+            }
+            &:nth-child(2){
+                max-width: 0;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+            }
+        }
+
+
+        &:hover{
+            .courses-photo{
+                &:nth-child(1){
+                    max-width: 0;
+                    max-height: 0;
+                    opacity: 0;
+                    overflow: hidden; 
+                }
+
+                &:nth-child(2){
+                    max-width: 100%;
+                    max-height: 100%;
+                    opacity: 1;
+                    overflow: visible;
+                    background-position: centerleft;
                 }
             }
         }
+
+        &__lector{
+            &-title{
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 3.8rem;
+                line-height: 6rem;
+                text-align: center;
+                color: #272727;
+            }
+            &-description{
+                width: 40rem;
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 2rem;
+                text-align: center;
+                color: black;
+                text-shadow: 1px 1px 2px #fff;
+            }
+            &-wrap{
+                width: 50%;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                left: 0;
+                position: absolute;
+                opacity: 0;
+                &:hover{
+                    opacity: 1;
+                    background-image: url('../img/lector.png');
+                    background-position: center left;
+                    background-size: cover;
+                }
+      
+            }
+        }
+        &__practic{
+            &-title{
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 3.8rem;
+                line-height: 6rem;
+                text-align: center;
+                color: #fff;
+            }
+            &-description{
+                width: 40rem;
+                font-weight: 400;
+                font-size: 1.8rem;
+                line-height: 2rem;
+                text-align: center;
+                color: #D2D2D2;
+                text-shadow: 1px 1px 2px black;
+            }
+            &-wrap{
+                width: 50%;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                right: 0;
+                position: absolute;
+                opacity: 0;
+                &:hover{
+                    opacity: 1;
+                    background-image: url('../img/practic.png');
+                    background-position: center left;
+                    background-size: cover;
+                    // background-position-y: -.1rem;
+                    transition: opacity .1s ease-in-out;
+                }
+      
+            }
+        }
+        
     }
 
-    &__content{
-        position: absolute;
-        top: 0;
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
 }
 
-
-/* Сразу скрываем вторую картинку */
-.change-photos{
-    width: 50%;
-    height: 99vh;
+.lector{
+    position: relative;
+    left: 0;
+    bottom: 0;
 }
-.change-photos .change-photo:nth-of-type(2) {
-    display: none;
-    width: 100%;
-    height: 99vh;
-  }
-  
-  /* При наведении курсора на родительский класс change-photos первую картинку скрываем, а вторую показываем */
-  
-  .change-photos:hover .change-photo:nth-of-type(1) {
-    display: none;
-    width: 100%;
-  }
-  
-  .change-photos:hover .change-photo:nth-of-type(2) {
-    width: 100%;
-    display: block;
-  }
-  
-  .change-photos:hover {
-    cursor: pointer;
-  }
-  .change{
-    display: flex;
-  }
+
+.practic{
+    position: relative;
+    right: 0;
+}

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -470,68 +469,119 @@ input[type=date] {
   margin: 0 auto;
 }
 
-.course__wrap {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  height: 99vh;
+.courses {
   width: 100%;
-}
-.course__wrap_hover {
-  display: none;
-}
-.course__wrap-bg {
+  height: 99vh;
   display: flex;
   flex-direction: row;
 }
-.course__bg {
+.courses-photos {
+  width: 50%;
+}
+.courses-photos .courses-photo img {
   width: 100%;
   height: 99vh;
+  background-position: center left;
+  object-fit: cover;
 }
-.course__bg img:hover {
-  cursor: pointer;
+.courses-photos .courses-photo:nth-child(2) {
+  max-width: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
-.course__bg img:hover .course__bg {
-  display: none;
+.courses-photos:hover .courses-photo:nth-child(1) {
+  max-width: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
-.course__content {
-  position: absolute;
-  top: 0;
-  display: flex;
-  width: 100%;
+.courses-photos:hover .courses-photo:nth-child(2) {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1;
+  overflow: visible;
+  background-position: centerleft;
+}
+.courses-photos__lector-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 6rem;
+  text-align: center;
+  color: #272727;
+}
+.courses-photos__lector-description {
+  width: 40rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 2px #fff;
+}
+.courses-photos__lector-wrap {
+  width: 50%;
+  text-align: center;
   height: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  left: 0;
+  position: absolute;
+  opacity: 0;
 }
-
-/* Сразу скрываем вторую картинку */
-.change-photos {
+.courses-photos__lector-wrap:hover {
+  opacity: 1;
+  background-image: url("../img/lector.png");
+  background-position: center left;
+  background-size: cover;
+}
+.courses-photos__practic-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 6rem;
+  text-align: center;
+  color: #fff;
+}
+.courses-photos__practic-description {
+  width: 40rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #D2D2D2;
+  text-shadow: 1px 1px 2px black;
+}
+.courses-photos__practic-wrap {
   width: 50%;
-  height: 99vh;
-}
-
-.change-photos .change-photo:nth-of-type(2) {
-  display: none;
-  width: 100%;
-  height: 99vh;
-}
-
-/* При наведении курсора на родительский класс change-photos первую картинку скрываем, а вторую показываем */
-.change-photos:hover .change-photo:nth-of-type(1) {
-  display: none;
-  width: 100%;
-}
-
-.change-photos:hover .change-photo:nth-of-type(2) {
-  width: 100%;
-  display: block;
-}
-
-.change-photos:hover {
-  cursor: pointer;
-}
-
-.change {
+  text-align: center;
+  height: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+}
+.courses-photos__practic-wrap:hover {
+  opacity: 1;
+  background-image: url("../img/practic.png");
+  background-position: center left;
+  background-size: cover;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.lector {
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.practic {
+  position: relative;
+  right: 0;
 }
