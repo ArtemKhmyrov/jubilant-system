@@ -47,6 +47,14 @@
                 color: black;
             }
         }
+        &_task{
+            width: 20rem;
+            background-color: black;
+            border: .2rem solid black;
+            &:hover{
+                border: .2rem solid #D1B476;
+            }
+        }
     }
     
 }
