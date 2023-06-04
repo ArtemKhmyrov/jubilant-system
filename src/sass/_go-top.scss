@@ -1,0 +1,61 @@
+.go-top {
+    z-index: 10000;
+    position: fixed;
+    right: 10%;
+    bottom: -13%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: rgba(0, 51, 153, 0.5);
+    border-radius: 50%;
+    border: .1rem solid #D1B476;
+    background-color: #272727;
+    transition: opacity 0.5s ease-in-out, overflow 0.5s ease-in-out;
+    width: 5.1rem;
+    height: 5.1rem;
+    opacity: 0;
+    overflow: hidden;
+    span{
+        padding-top: 1rem;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        color: #D1B476;
+    }
+}
+
+.go-top--show {
+    bottom: 10%;
+    opacity: 1;
+    overflow: visible;
+    transition: opacity 0.5s ease-in-out, overflow 0.5s ease-in-out;
+}
+.go-top span::after {
+    position: relative;
+    content: "";
+    top: -.8rem;
+    right: .7rem;
+    width: 0.3rem;
+    height: 1.8rem;
+    background-color: #D1B476;
+    transform: rotate(45deg);
+}
+.go-top span::before {
+    position: relative;
+    content: "";
+    left: .7rem;
+    top: -.8rem;
+    width: 0.3rem;
+    height: 1.8rem;
+    background-color: #D1B476;
+    transform: rotate(-45deg);
+}
+

@@ -47,11 +47,38 @@
         <section class="profile">
             <div class="container">
                 <div class="profile__wrap">
-                    <form action="./vendor/signin.php" method="POST" class="registration-form">
-                        <input type="text" name="login" placeholder="Логин" required>
-                        <input type="password" name="password" placeholder="Пароль" required>
-                        <button type="submit" class="button-gold"><a href="#" class="button-link">Войти</a></button>
-                    </form>
+                    <div class="profile__info">
+                        <picture>
+                            <img src="./img/profile.png" alt="photo">
+                        </picture>
+
+                        <span class="profile__name">Пользователь</span>
+                    </div>
+
+
+
+                    <div class="quiz__head">
+                        <div class="head__content" id="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus odit accusamus, illum quas magni provident odio praesentium commodi sint, porro harum, minus cupiditate architecto culpa aut ex dolore officia.</div>
+                    </div>
+                    <div class="quiz__body">
+                        <div class="buttons">
+                            <div class="buttons__content" id="buttons">
+                                <button class="button">Default button</button><br>
+                                <button class="button button_wrong">Wrong answer</button><br>
+                                <button class="button button_correct">Correct answer</button><br>
+                                <button class="button button_passive">Unclicked button</button><br>
+                            </div>
+                        </div>
+              
+                        <div class="quiz__footer">
+                            <div class="footer__content" id="pages">0 / 0</div>
+                        </div>
+                    </div>
+
+
+
+
+                    <iframe src="profile.html" width="480" height="720" class="quiz-frame"></iframe>
                 </div>
             </div>
         </section>
