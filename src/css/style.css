@@ -916,6 +916,9 @@ input[type=date] {
 .kompressiya-bg_balance {
   height: 115rem;
 }
+.kompressiya-bg_panorama {
+  height: 170rem;
+}
 .kompressiya__paragraph {
   font-weight: 400;
   font-size: 2rem;
@@ -1042,4 +1045,38 @@ input[type=date] {
   height: 1.8rem;
   background-color: #D1B476;
   transform: rotate(-45deg);
+}
+
+.to-back {
+  margin-top: -4rem;
+  margin-bottom: 10rem;
+  display: flex;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: #D2D2D2;
+  text-transform: uppercase;
+  position: relative;
+}
+.to-back span {
+  margin-right: 1.5rem;
+}
+.to-back span::before {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 1.5rem;
+  top: 0.5rem;
+  transform: rotate(-45deg);
+  background-color: #D1B476;
+}
+.to-back span::after {
+  content: "";
+  position: absolute;
+  width: 0.2rem;
+  height: 1.5rem;
+  top: -0.5rem;
+  transform: rotate(45deg);
+  background-color: #D1B476;
 }
