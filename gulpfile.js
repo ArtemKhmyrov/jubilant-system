@@ -1,5 +1,5 @@
 let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
-    fileswatch   = 'html,htm,txt,json,md,woff2', // List of files extensions for watching & hard reload (comma separated)
+    fileswatch   = 'html,htm,txt,json,md,woff2,php', // List of files extensions for watching & hard reload (comma separated)
 	baseDir      = 'src', // Base directory path without «/» at the end
     imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
     online       = true; // If «false» - Browsersync will work offline without internet connection
