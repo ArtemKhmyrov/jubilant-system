@@ -1080,3 +1080,65 @@ input[type=date] {
   transform: rotate(45deg);
   background-color: #D1B476;
 }
+
+.ekvalayser__wrap {
+  margin-top: 10rem;
+  position: absolute;
+  width: 40.4rem;
+  height: 18.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+.ekvalayser__wrap_reverse {
+  flex-direction: row-reverse;
+  right: 7.8rem;
+}
+.ekvalayser__wrap-play {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  flex-direction: column;
+}
+.ekvalayser__wrap-play:hover {
+  cursor: pointer;
+}
+.ekvalayser__wrap-play audio {
+  width: 30rem;
+}
+.ekvalayser__wrap-button {
+  display: flex;
+  justify-content: space-between;
+  bottom: 14rem;
+  width: 89.7rem;
+  height: 4.7rem;
+  margin: 10rem 0rem;
+}
+.ekvalayser__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1.9rem;
+}
+.ekvalayser__column span {
+  width: 2.5rem;
+  height: 0.7rem;
+  border-radius: 1rem;
+  background-color: #D1B476;
+}
+.ekvalayser__button {
+  background-color: #D9D9D9;
+  width: 20.3rem;
+  border-radius: 5.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  color: #272727;
+}
+.ekvalayser__button:hover {
+  color: #D1B476;
+  background-color: black;
+}
